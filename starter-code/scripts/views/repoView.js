@@ -11,11 +11,12 @@
   repoView.renderRepos = function() {
     $('#about ul').empty().append(
       repos.withTheAttribute('name')  // TODO: experiment changing this attribute field!
-      .map(repoCompiler)
+      .map(repoCompiler(repos.requestRepos()))
     );
   };
 /* TODO: Call the function that loads (or 'requests') our repo data.
     Pass in some view funcyion as a higher order callback, so our repos
     will render after the data is loaded. */
-
-});
+  repoView.renderRepos();
+  module.repoView = repoView;
+})(window);

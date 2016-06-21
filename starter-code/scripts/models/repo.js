@@ -16,6 +16,7 @@
         console.log(data);
       }
     });
+    callback();
   };
 
   repos.withTheAttribute = function(myAttr) {
