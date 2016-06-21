@@ -78,3 +78,25 @@ input:invalid, textarea:invalid {
 input:valid, textarea:valid {
   border-color: #89CB8E;
 }
+
+.calledout {
+  font-weight: bold;
+}
+
+.repo-link:link {
+  color: teal;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.repo-link:visited {
+  color: teal;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.repo-link:hover {
+  color: red;
+  text-decoration: underline;
+  font-size: 120%;
+}

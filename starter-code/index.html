@@ -33,26 +33,18 @@
     <script id="author-template" type="text/x-handlebars-template">
       <li><strong>{{name}}</strong>: {{numWords}} words written</li>
     </script>
-    <script id="github-info" type="text/x-handlebars-template">
-      <li>
-        <p>name:{{name}}</p>
-        <p>login:{{login}}</p>
-        <p>followers:{{followers}}</p>
-        <p>following:{{following}}</p>
-      </li>
-    </script>
     <script id="repo-template" type="text/x-handlebars-template">
          <li>
-           <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a></li>
-           <p>Description: {{description}}</p>
-           <p>Primary Language: {{language}}</p> <!-- which programming language is most used in each project, from api -->
-           <p>Created: {{created_at}}</p>
-           <p>Last Updated: {{updated_at}}</p>
+           <h3><a href="{{html_url}}" target="_blank" class="repo-link">{{name}}</a></h3></li>
+           <p><span class="calledout">Description:</span> {{description}}</p>
+           <p><span class="calledout">Primary Language:</span> {{language}}</p> <!-- which programming language is most used in each project, from api -->
+           <p><span class="calledout">Created:</span> {{created_at}}</p>
+           <p><span class="calledout">Last Updated:</span> {{updated_at}}</p>
            {{#if watchers_count}}
-             <p>{{watchers}} watching this repo</p>
+             <p>{{watchers}} <span class="calledout">watching this repo</span></p>
            {{/if}}
            {{#if stargazers_count}}
-             <p>Number of people stargazing this repo: {{stargazers_count}}.</p>
+             <p><span class="calledout">Number of people stargazing this repo:</span> {{stargazers_count}}.</p>
            {{/if}}
          </li>
        </script>
@@ -99,13 +91,8 @@
         </div>
       </section>
       <section id="about" class="tab-content">
-        <header>
-          Welcome to my Blog
-        </header>
         <section>
           <h1>Check out my Projects on GitHub:</h1>
-          <ul id='github-info'>
-          </ul>
           <ul>
             <li>Coding Projects Go Here</li>
           </ul>
