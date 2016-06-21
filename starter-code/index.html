@@ -33,7 +33,21 @@
     <script id="author-template" type="text/x-handlebars-template">
       <li><strong>{{name}}</strong>: {{numWords}} words written</li>
     </script>
-    
+    <script id="repo-template" type="text/x-handlebars-template">
+         <li>
+           <h3><a href="{{html_url}}" target="_blank" class="repo-link">{{name}}</a></h3></li>
+           <p><span class="calledout">Description:</span> {{description}}</p>
+           <p><span class="calledout">Primary Language:</span> {{language}}</p> <!-- which programming language is most used in each project, from api -->
+           <p><span class="calledout">Created:</span> {{created_at}}</p>
+           <p><span class="calledout">Last Updated:</span> {{updated_at}}</p>
+           {{#if watchers_count}}
+             <p>{{watchers}} <span class="calledout">watching this repo</span></p>
+           {{/if}}
+           {{#if stargazers_count}}
+             <p><span class="calledout">Number of people stargazing this repo:</span> {{stargazers_count}}.</p>
+           {{/if}}
+         </li>
+       </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -77,9 +91,6 @@
         </div>
       </section>
       <section id="about" class="tab-content">
-        <header>
-          Welcome to my Blog
-        </header>
         <section>
           <h1>Check out my Projects on GitHub:</h1>
           <ul>
@@ -108,17 +119,19 @@
     <script src="/vendor/scripts/webdb.js"></script>
     <script src="/vendor/scripts/page.js"></script>
 
-    <!-- TODO: Include your secret GitHub token file, which should be gitingore'd,
+    <!-- TODO:DONE Include your secret GitHub token file, which should be gitingore'd,
       therefore recreated in every developer's environment. -->
-
+    <script src="/githubToken.js"></script>
     <!-- Model files: -->
-    <!-- TODO: Be sure to include any new model files: -->
+    <!-- TODO:DONE Be sure to include any new model files: -->
     <script src="/scripts/models/article.js"></script>
+    <script src="/scripts/models/repo.js"></script>
 
     <!-- View files: -->
-    <!-- TODO: Be sure to include any new view files: -->
+    <!-- TODO:DONE Be sure to include any new view files: -->
     <script src="/scripts/views/articleView.js"></script>
     <script src="/scripts/views/adminView.js"></script>
+    <script src="/scripts/views/repoView.js"></script>
 
     <!-- Controller files: -->
     <script src="/scripts/controllers/articleController.js"></script>
