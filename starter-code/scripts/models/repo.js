@@ -6,7 +6,7 @@
   repos.requestRepos = function(callback) {
     /* TODO: How would you like to fetch your repos? Someone say AJAX?!
       Do not forget to call the callback! */
-    return $.ajax({
+    $.ajax({
       url: 'https://api.github.com/users/codefellows-seattle-301d7/repos' +
         '?per_page=10' +
         '&sort=updated',
@@ -14,9 +14,12 @@
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data) {
         console.log(data);
+        repos.allRepos = data;
+        callback();
       }
+
     });
-    callback();
+
   };
 
   repos.withTheAttribute = function(myAttr) {
@@ -24,6 +27,9 @@
       return aRepo[myAttr];
     });
   };
+
+
+
 
   module.repos = repos;
 })(window);
