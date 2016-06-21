@@ -33,7 +33,7 @@
     <script id="author-template" type="text/x-handlebars-template">
       <li><strong>{{name}}</strong>: {{numWords}} words written</li>
     </script>
-    
+
   </head>
   <body>
     <header class="site-header clearfix">
@@ -107,18 +107,20 @@
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/vendor/scripts/webdb.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-
-    <!-- TODO: Include your secret GitHub token file, which should be gitingore'd,
+    <script src="githubToken.js"></script>
+    <!-- DONE: Include your secret GitHub token file, which should be gitingore'd,
       therefore recreated in every developer's environment. -->
 
     <!-- Model files: -->
-    <!-- TODO: Be sure to include any new model files: -->
+    <!-- DONE: Be sure to include any new model files: -->
     <script src="/scripts/models/article.js"></script>
+    <script src="scripts/models/repo.js"></script>
 
     <!-- View files: -->
-    <!-- TODO: Be sure to include any new view files: -->
+    <!-- DONE: Be sure to include any new view files: -->
     <script src="/scripts/views/articleView.js"></script>
     <script src="/scripts/views/adminView.js"></script>
+    <script src="scripts/views/repoView.js"></script>
 
     <!-- Controller files: -->
     <script src="/scripts/controllers/articleController.js"></script>
