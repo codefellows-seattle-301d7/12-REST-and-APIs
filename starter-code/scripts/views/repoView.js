@@ -30,8 +30,5 @@
 
   repos.requestRepos(repoView.renderRepos);
 
-
   module.repoView = repoView;
 })(window);
-
- //repos.requestRepos(repoView.renderRepos);
