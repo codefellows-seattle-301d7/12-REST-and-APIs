@@ -8,13 +8,20 @@
     return template(repo);
   };
 
+  // repoView.renderRepos = function() {
+  //   $('#about ul').empty().append(
+  //     repos.withTheAttribute('name')  // TODO: experiment changing this attribute field!
+  //     .map(function(repo) {           // .map(repoCompiler)
+  //       console.log(repo);            //  delete
+  //       return repoCompiler(repo);
+  //     })
+  //   );
+  // };
+
   repoView.renderRepos = function() {
     $('#about ul').empty().append(
       repos.withTheAttribute('name')  // TODO: experiment changing this attribute field!
-      .map(function(repo) {
-        console.log(repo);
-        return repoCompiler(repo);
-      })
+      .map(repoCompiler)
     );
   };
 /* TODO: Call the function that loads (or 'requests') our repo data.

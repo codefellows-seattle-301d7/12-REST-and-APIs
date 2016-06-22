@@ -8,7 +8,7 @@
       Do not forget to call the callback! */
     $.ajax({
       url: 'https://api.github.com/users/codefellows-seattle-301d7/repos' +
-        '?per_page=10' +
+        '?per_page=15' +
         '&sort=updated',
       typeof: 'GET',
       headers: {'Authorization': 'token ' + githubToken},
