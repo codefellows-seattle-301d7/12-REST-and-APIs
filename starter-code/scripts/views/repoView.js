@@ -28,10 +28,10 @@
     Pass in some view funcyion as a higher order callback, so our repos
     will render after the data is loaded. */
 
-
+  repos.requestRepos(repoView.renderRepos);
 
 
   module.repoView = repoView;
 })(window);
 
-repos.requestRepos(repoView.renderRepos);
+ //repos.requestRepos(repoView.renderRepos);
